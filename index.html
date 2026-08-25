@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Échecs IA ML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header>
+  <h1>♟️ Échecs IA</h1>
+  <p>Affronte l'intelligence artificielle</p>
+</header>
+
+<main>
+
+  <section class="game">
+
+    <div id="board"></div>
+
+    <div class="controls">
+      <button id="newGame">🔄 Nouvelle partie</button>
+
+      <label>
+        Difficulté :
+        <select id="difficulty">
+          <option value="1">Facile</option>
+          <option value="2" selected>Moyenne</option>
+          <option value="3">Difficile</option>
+        </select>
+      </label>
+
+      <button id="train">🧠 Entraîner l'IA</button>
+
+      <p id="status">À toi de jouer !</p>
+
+      <div class="stats">
+        <span>🏆 Victoires : <b id="wins">0</b></span>
+        <span>💀 Défaites : <b id="losses">0</b></span>
+        <span>🤝 Nulles : <b id="draws">0</b></span>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<script src="chess.js"></script>
+<script src="ml.js"></script>
+<script src="ai.js"></script>
+<script>
+  startGame();
+</script>
+
+</body>
+</html>
